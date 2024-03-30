@@ -9,7 +9,7 @@ export const useSearch = () => useContext(SearchContext);
 // Provider component for the search context
 export const SearchProvider = ({ children }) => {
   const [search, setSearch] = useState('');
-    console.log(search);
+   
   return (
     <SearchContext.Provider value={{ search, setSearch }}>
       {children}
