@@ -25,7 +25,7 @@ import React from 'react';
 
 const VedioCart = ({ info }) => {
     // Check if 'info' is defined
-    console.log(info);
+    // console.log(info);
     if (!info) {
         return <div>No video information available</div>;
     }

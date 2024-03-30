@@ -2,11 +2,12 @@ import React from 'react'
 import ButtonList from './ButtonList'
 import VedioContainer from './VedioContainer'
 
-const MainContainer = () => {
+const MainContainer = ({search}) => {
+  console.log(search);
   return (
     <div className='flex flex-wrap'>
     <div><ButtonList/></div>
-    <div><VedioContainer /></div>
+    <div><VedioContainer search={search} /></div>
     </div>
   )
 }

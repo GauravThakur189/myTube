@@ -2,22 +2,28 @@ import React, { useEffect ,useState} from 'react'
 import { YOUTUBE_VIDEO_API } from '../utils/constants';
 import VedioCart from './VedioCart';
 import { Link } from 'react-router-dom';
+import { useSearch } from '../store/context';
 
 
 
 const VedioContainer = () => {
+  const { search } = useSearch();
   const [vedios, setVedios] = useState([]);
   const[selectedVideo,setSelectedVideo]=useState([]);
    useEffect(()=>{
       getVedios();
-   },[])
+   },[search])
 
 
    const getVedios = async()=>{
     const data  = await fetch(YOUTUBE_VIDEO_API);
     const json = await data.json(); 
-    setVedios(json.items)
-    setSelectedVideo(json.items);
+    console.log(json);
+    // console.log(json.itmes);
+    const newData = json.items.filter((data)=> data.snippet.title.toLowerCase().includes(search.toLowerCase()));
+    console.log(newData);
+    setVedios(newData)
+    setSelectedVideo(newData);
    }
 
    

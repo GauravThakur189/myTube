@@ -7,7 +7,7 @@ const SideBar = () => {
     
     if(!isMenuOpen) return null;
   return (
-    <div className=' w-36 flex-col bg-gray-100  shadow-lg '>
+    <div className=' p-5 w-36 flex-col bg-gray-100  shadow-lg  '>
     <div>
       <ul className='my4'>
         <li>Home</li>
