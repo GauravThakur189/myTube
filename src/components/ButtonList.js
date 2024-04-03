@@ -4,7 +4,7 @@ import Button from './Button'
 
 const ButtonList = () => {
 
-  const  buttons = [ 'All','music','javascript', 'python', 'java','react router','coding  club','news','civil service exams','trains','aircrafts','satsang','software engineer','tests'];
+  const  buttons = [ 'All','Live','music','javascript', 'python', 'java','react router','coding  club','news','civil service exams','trains','aircrafts','satsang','software engineer'];
  
     
 

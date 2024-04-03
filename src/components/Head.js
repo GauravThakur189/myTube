@@ -15,9 +15,9 @@ const Head = ({handleSearch}) => {
        dispatch(toggleMenu());
    }
 
-   const searchResult = ()=>{
-      // <VedioContainer  query={searchQuery}/>;
-   }
+  //  const searchResult = ()=>{
+  //     // <VedioContainer  query={searchQuery}/>;
+  //  }
 
   
   return (
