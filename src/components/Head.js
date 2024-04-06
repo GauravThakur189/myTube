@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { toggleMenu } from '../utils/appSlice';
-import VedioContainer from './VedioContainer';
+// import VedioContainer from './VedioContainer';
 import { useSearch } from '../store/context';
 const Head = ({handleSearch}) => {
   const { search, setSearch } = useSearch();
@@ -21,7 +21,7 @@ const Head = ({handleSearch}) => {
 
   
   return (
-    <div className='flex justify-between p-2 m-2 shadow-lg fixed'>
+    <div className='flex justify-between p-2 m-2 shadow-lg '>
     <div className='flex gap-4'>
     <img 
     onClick={()=>toggleSideBar()}
@@ -37,7 +37,7 @@ const Head = ({handleSearch}) => {
         <input className=' px-3 h-8 w-80 border border-gray-600 rounded-l-full '  type="text" 
          value={searchQuery}
          onChange={e=>setSearchQuery(e.target.value)}
-         onClick={searchResult}
+        //  onClick={searchResult}
         placeholder="Search"/>
         <button onClick={()=>setSearch(searchQuery)} className=' px-5 border border-gray-600 rounded-r-full bg-slate-400'>
          🔍
